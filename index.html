@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <title>Pokedex</title>
+</head>
+    <body>
+        <main class="container-fluid">
+            <header>
+                <nav class="navbar navbar-expand-lg fixed-top header__nav">
+                    <div class="container">
+                        <img src="assets/img/logo.png" class="header__logo" />
+                    </div>
+                </nav>
+            </header>
+            <section class="section-principal">
+                <h1>Seleccione tipo de Pokemón</h1>
+
+                <form id="formTipos" class="form-group" onsubmit="buscaPokemon();" action="javascript:void(0);">
+                    <select class="form-control" id="selectTipo">
+                    </select>
+
+                    <div class="contentBoton">
+                        <button type="submit" class="btn section-principal__boton" >Atr&aacute;palo!</button>
+                    </div>
+
+                </form>
+            </section>
+
+            <section class="section-pokemones">
+
+            </section>
+
+
+            <footer class="footer">
+                <img src="assets/img/logo_footer.png" class="footer__logo" />
+            </footer>
+
+        </main>
+            <!--jQuery 3.3.1 sin slim-->
+            <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+            <!--Popper JS 1.14.3-->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+            <!--Bootstrap JS 4.2.1-->
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+            <script type="text/javascript" src="assets/js/script.js"></script>
+    </body>
+</html>
+
