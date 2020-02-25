@@ -35,3 +35,26 @@ h1 {
     display:flex;
     justify-content:center;
 }
+.carta-principal {
+    border: 1px solid #ef5350!important;
+    cursor: pointer;
+}
+.columnas-principal {
+    padding: 10px;
+    text-align: center;
+}
+.header__modalPokemon {
+    background: #ef5350;
+    color:white;
+}
+.modal__img {
+    width: 35%;
+}
+.modal__contenedor{
+    display:flex;
+    justify-content:center;
+}
+#graficoPokemon {
+    position: relative;
+    margin: 30px;
+}
