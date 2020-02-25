@@ -31,9 +31,10 @@ h1 {
     font-size: 30px !important;
     padding: 15px;
 }
-.contentBoton{
-    display:flex;
-    justify-content:center;
+.contentBoton {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
 }
 .carta-principal {
     border: 1px solid #ef5350!important;

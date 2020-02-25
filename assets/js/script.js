@@ -1,6 +1,6 @@
-(function () {
+(function () {
     console.log("inicio datos...");
-
+    $("#textoBusqueda").hide();
     $.ajax({
         type: "GET",
         url: "https://pokeapi.co/api/v2/type/",
@@ -33,23 +33,26 @@ function buscaPokemon() {
 }
 
 function cargaArregloPokemones(url, valor) {
-
+    $("#textoBusqueda").empty(valor);
     var pokemones = [];
 
-        $.ajax({
-            type: "GET",
-            url: url,
-            success: function (data) {
-                for (i = 0; i < data.pokemon.length; i++) {
-                    let pok = [];
-                    pok[i] = data.pokemon[i].pokemon.name;   
-                    pokemones[i] = pok[i];
+    $.ajax({
+        type: "GET",
+        url: url,
+        success: function (data) {
+                
+            $("#textoBusqueda").show();
+            $("#textoBusqueda").append("Se encontraron los siguientes pokemones de tipo: <strong>" +valor+"</strong>");
+            for (i = 0; i < data.pokemon.length; i++) {
+                let pok = [];
+                pok[i] = data.pokemon[i].pokemon.name;   
+                pokemones[i] = pok[i];
                     
-                    $("#lista-pokemones").append('<div class="col-1 columnas-principal"><div id="'+pok[i]+'" class="card carta-principal" onclick="obtenerDatoPokemon(id);">' + pok[i] + '</div></div>');
-
-                }
+                $("#lista-pokemones").append('<div class="col-md-2 columnas-principal"><div id="'+pok[i]+'" class="card carta-principal" onclick="obtenerDatoPokemon(id);">' + pok[i] + '</div></div>');
+                    
             }
-        });
+        }
+    });
     
 }
 
@@ -87,7 +90,7 @@ function obtenerDatoPokemon(nombrePokemon) {
                     '<p class="text-center"><strong>Nombre:</strong> ' + nombre + '</p>' +
                     '<p class="text-center"><strong>Peso:</strong> ' + peso + ' kg</p>' +
                     '<p class="text-center"><strong>Habilidades:</strong> ' + habilidades_concatenadas + '</p>' +
-                '<div id="graficoPokemon">' + +'</div>'+
+                '<div id="graficoPokemon"></div>'+
                     '</div>'+
                 '</div>'+
                   '</div>'+
